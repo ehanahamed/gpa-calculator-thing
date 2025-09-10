@@ -23,5 +23,19 @@ public class ClassInfo {
         return courseLevel;
     }
 
-    public double getGrade() {}
+    public double getGrade() {
+        return grade;
+    }
+
+    public void updateGrade(double g) {
+        grade = g;
+    }
+
+    public void updateCourseName(String cn) {
+        className = cn;
+    }
+
+    public void updateLevel(CourseLevel level) {
+        courseLevel = level;
+    }
 }
