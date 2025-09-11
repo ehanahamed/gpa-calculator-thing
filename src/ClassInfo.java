@@ -1,9 +1,3 @@
-package src;
-
-enum CourseLevel {
-    AP, HONORS, ACADEMIC
-}
-
 public class ClassInfo {
     private String className;
     private CourseLevel courseLevel;
