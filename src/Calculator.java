@@ -1,3 +1,6 @@
+package src;
+import java.util.ArrayList;
+
 public class Calculator {
     public static double calculateGPA(ArrayList<ClassInfo> classInfos) {
         double sum = 0.0;
@@ -11,7 +14,7 @@ public class Calculator {
                    )
             } else if (classInfo.getGrade() >= 94) {
                 gradeWeight = classInfo.getCourseLevel() == CourseLevel.AP ?
-                        5.8 : (classInfo.getCourseLevel() == CourseLevel.Honors ?
+                        5.8 : (classInfo.getCourseLevel() == CourseLevel.HONORS ?
                         5.3 : 4.3
                 )
             } else if (classInfo.getGrade() >= 90) {
