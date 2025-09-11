@@ -64,5 +64,10 @@ public class Calculator {
             sum += gradeWeight;
             creditsCount += classInfo.getCredits();
         }
+        if (creditsCount > 0) {
+            return sum / creditsCount;
+        } else {
+            return 0.0;
+        }
     }
 }
