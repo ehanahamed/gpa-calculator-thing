@@ -32,6 +32,13 @@ public class Main {
             }
         }
 
+        /* clears screen */
+        for(int i = 0; i < 11; i++) {
+            System.out.println(" ");
+        }
+
+        System.out.println("Calculating your GPA...");
+        System.out.println(Calculator.calculateGPA(classes));
 
     }
 }
