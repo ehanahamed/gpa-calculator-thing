@@ -13,15 +13,16 @@ public class Main {
             String courseName = scan.nextLine();
             System.out.print("Type the course level: ");
             String courseLevel = scan.nextLine();
+            CourseLevel courseLevelEnum;
             try {
-                CourseLevel courseLevelEnum = CourseLevel.valueOf(courseLevel);
+                courseLevelEnum = CourseLevel.valueOf(courseLevel);
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid course level. Try again.");
                 continue;
             }
             System.out.print("Enter your grade: ");
             double courseGrade = scan.nextDouble();
-            ClassInfo class = ClassInfo(courseName, courseLevel, );
+            classes.add(new ClassInfo(courseName, courseLevelEnum, courseGrade));
             System.out.print("Add another course? (Y/n): ");
         }
     }
