@@ -8,6 +8,8 @@ public class Main {
         ArrayList<ClassInfo> classes = new ArrayList<ClassInfo>();
         System.out.println("GPA Calculator");
         boolean continueLooping = true;
+
+        /* allows user to add courses */
         while (continueLooping) {
             System.out.print("Course name: ");
             String courseName = scan.nextLine();
@@ -23,7 +25,13 @@ public class Main {
             System.out.print("Enter your grade: ");
             double courseGrade = scan.nextDouble();
             classes.add(new ClassInfo(courseName, courseLevelEnum, courseGrade));
-            System.out.print("Add another course? (Y/n): ");
+            System.out.print("Add another course? (type 'yes' or 'no'): ");
+            String addCourse = scan.nextLine();
+            if (addCourse.equalsIgnoreCase("no")) {
+                continueLooping = false;
+            }
         }
+
+
     }
 }
