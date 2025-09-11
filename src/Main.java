@@ -24,7 +24,9 @@ public class Main {
             }
             System.out.print("Enter your grade: ");
             double courseGrade = scan.nextDouble();
-            classes.add(new ClassInfo(courseName, courseLevelEnum, courseGrade));
+            System.out.println("How many credits for this course?: ");
+            double courseCredits = scan.nextDouble();
+            classes.add(new ClassInfo(courseName, courseLevelEnum, courseGrade, courseCredits));
             System.out.print("Add another course? (type 'yes' or 'no'): ");
             String addCourse = scan.nextLine();
             if (addCourse.equalsIgnoreCase("no")) {
