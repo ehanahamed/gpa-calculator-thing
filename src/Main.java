@@ -27,6 +27,7 @@ public class Main {
             System.out.println("How many credits for this course?: ");
             double courseCredits = scan.nextDouble();
             classes.add(new ClassInfo(courseName, courseLevelEnum, courseGrade, courseCredits));
+            scan.nextLine();
             System.out.print("Add another course? (type 'yes' or 'no'): ");
             String addCourse = scan.nextLine();
             if (addCourse.equalsIgnoreCase("no")) {
@@ -39,6 +40,7 @@ public class Main {
             System.out.println(" ");
         }
 
+        /* gives user their GPA */
         System.out.println("Calculating your GPA...");
         System.out.println(Calculator.calculateGPA(classes));
 
